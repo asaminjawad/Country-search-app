@@ -18,6 +18,7 @@ function App() {
   }, [])
   
   return (
+    //app will run from here
     <div>app</div>
   );
 }
