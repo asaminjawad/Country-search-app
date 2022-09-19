@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+
+const URL = "https://restcountries.com/v3.1/all"
 
 function App() {
+  
+  const [isLoading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [countries, setCountries] = useState([]);
+
+  const fetchData = async(URL)=>{
+      setLoading(true)
+      
+  } 
+  
+  useEffect(()=>{
+    fetchData(URL)
+  }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>app</div>
   );
 }
 
